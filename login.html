@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up - Community Food Rescue</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+
+  
+</head>
+<body>
+
+  <div class="video-container">
+    <!-- Background Food Video -->
+    <video autoplay muted loop playsinline id="bgVideo">
+      <source src="food.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Dark Overlay Filter -->
+    <div class="video-overlay"></div>
+
+    <!-- Login / Sign Up Card -->
+    <div class="auth-card">
+      <div class="card-header">
+        <!-- SVG Logo (Green Circle + Grocery Bag + Heart Leaf) -->
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+          <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+          <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+          <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+        </svg>
+        <h2 id="modalTitle">Food Rescue</h2>
+        <p id="modalSubtitle">Log in to manage community food donations</p>
+      </div>
+
+      <form id="authForm" novalidate>
+        <div class="form-group">
+          <label for="authEmail">Email Address</label>
+          <input type="email" id="authEmail" placeholder="e.g. user@foodrescue.org" required>
+          <span class="error-message" id="authEmailError">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="authPassword">Password</label>
+          <input type="password" id="authPassword" placeholder="At least 6 characters" required>
+          <span class="error-message" id="authPasswordError">Password must be at least 6 characters long.</span>
+        </div>
+
+        <button type="submit" id="authSubmitBtn" class="btn">Log In</button>
+      </form>
+
+      <div class="auth-toggle">
+        <span id="toggleText">Don't have an account?</span>
+        <button type="button" id="toggleAuthBtn">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Food - Community Food Rescue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+          <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+          <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+          <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+          <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+        </svg>
+        <span>Food Rescue</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="donate.html" class="active">Donate Food</a>
+        <a href="pantries.html">Find Pantries</a>
+        <span id="userInfo" class="user-info"></span>
+        <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    <div class="form-card">
+      <h2>Log a Surplus Food Donation</h2>
+      <p>Provide details about the food items you wish to donate to local shelters.</p>
+
+      <form id="donationForm" novalidate>
+        <div class="form-group">
+          <label for="foodType">Food Category</label>
+          <select id="foodType" required>
+            <option value="">Select Category</option>
+            <option value="Fresh Produce">Fresh Produce</option>
+            <option value="Bakery & Bread">Bakery & Bread</option>
+            <option value="Canned Goods">Canned Goods</option>
+            <option value="Prepared Meals">Prepared Meals</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity (in kg or meal portions)</label>
+          <input type="number" id="quantity" min="1" placeholder="e.g. 15" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pantrySelect">Target Pantry</label>
+          <select id="pantrySelect" required>
+            <option value="">Select a Food Bank</option>
+            <option value="Central City Pantry">Central City Pantry</option>
+            <option value="Hope Harbor Shelter">Hope Harbor Shelter</option>
+            <option value="Eastside Community Kitchen">Eastside Community Kitchen</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-full">Submit Donation</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

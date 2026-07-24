@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Food Rescue - Home</title>
+  <title>Find Pantries - Community Food Rescue</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,45 +21,42 @@
         <span>Food Rescue</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="donate.html">Donate Food</a>
-        <a href="pantries.html">Find Pantries</a>
+        <a href="pantries.html" class="active">Find Pantries</a>
         <span id="userInfo" class="user-info"></span>
         <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Bridging Surplus Food with Local Hunger Needs</h1>
-      <p>Join businesses, local markets, and volunteers in reducing food waste across our community.</p>
-      <div class="hero-buttons">
-        <a href="donate.html" class="btn btn-primary">Donate Food Now</a>
-        <a href="pantries.html" class="btn btn-secondary">Find a Food Pantry</a>
-      </div>
-    </div>
-  </section>
+  <main class="page-container">
+    <h2>Partner Food Pantries</h2>
+    <p>Find local centers accepting donations and providing meal services.</p>
 
-  <!-- Impact Tracker Section -->
-  <section class="impact-section">
-    <h2>Our Community Impact</h2>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3 id="totalMeals">0</h3>
-        <p>Meals Rescued</p>
+    <div class="pantry-grid">
+      <div class="pantry-card">
+        <h3>Central City Pantry</h3>
+        <p><strong>Address:</strong> 123 Main Street</p>
+        <p><strong>Hours:</strong> 8:00 AM - 5:00 PM</p>
+        <p><strong>Needs:</strong> Fresh vegetables, Canned goods</p>
       </div>
-      <div class="stat-card">
-        <h3 id="totalDonations">0</h3>
-        <p>Active Donations</p>
+
+      <div class="pantry-card">
+        <h3>Hope Harbor Shelter</h3>
+        <p><strong>Address:</strong> 456 Oak Avenue</p>
+        <p><strong>Hours:</strong> 9:00 AM - 7:00 PM</p>
+        <p><strong>Needs:</strong> Bakery items, Prepared meals</p>
       </div>
-      <div class="stat-card">
-        <h3>12</h3>
-        <p>Partner Pantries</p>
+
+      <div class="pantry-card">
+        <h3>Eastside Community Kitchen</h3>
+        <p><strong>Address:</strong> 789 Pine Road</p>
+        <p><strong>Hours:</strong> 10:00 AM - 4:00 PM</p>
+        <p><strong>Needs:</strong> Dairy, Produce, Dry grains</p>
       </div>
     </div>
-  </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
