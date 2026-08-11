@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate Food - Community Food Rescue</title>
+  <title>Donate Food | FeastForward</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +11,47 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
+      
       <a href="index.html" class="nav-logo">
-        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="38" height="38">
           <circle cx="100" cy="100" r="90" fill="#2e7d32" />
           <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
           <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
           <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
         </svg>
-        <span>Food Rescue</span>
+        <div class="logo-text">
+          <span class="brand-name">FeastForward</span>
+          <span class="brand-tagline">Share More. Waste Less.</span>
+        </div>
       </a>
+
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="donate.html" class="active">Donate Food</a>
+        <a href="donate.html">Donate Food</a>
         <a href="pantries.html">Find Pantries</a>
-        <span id="userInfo" class="user-info"></span>
+
+        <!-- Default Login Button when logged out -->
         <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
+
+        <!-- Profile Dropdown (Hidden until user logs in) -->
+        <div id="userProfileMenu" class="user-profile-menu hidden">
+          <button id="profileDropdownBtn" class="profile-btn" type="button">
+            <div class="avatar-circle" id="userAvatar">U</div>
+            <span id="userName">User</span>
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div id="profileDropdown" class="dropdown-content hidden">
+            <div class="dropdown-header">
+              <strong id="dropdownName">User Name</strong>
+              <small id="dropdownEmail">user@example.com</small>
+            </div>
+            <hr>
+            <a href="donate.html" class="dropdown-item">My Donations</a>
+            <button id="logoutBtn" class="dropdown-item logout-link" type="button">Log Out</button>
+          </div>
+        </div>
       </nav>
+
     </div>
   </header>
 
@@ -36,29 +61,33 @@
       <h2>Log a Surplus Food Donation</h2>
       <p>Provide details about the food items you wish to donate to local shelters.</p>
 
-      <form id="donationForm" novalidate>
+      <form id="donationForm">
+        <div class="form-group">
+          <label for="foodTitle">Item Title / Description</label>
+          <input type="text" id="foodTitle" placeholder="e.g. Fresh Croissants & Buns" required>
+        </div>
+
         <div class="form-group">
           <label for="foodType">Food Category</label>
           <select id="foodType" required>
             <option value="">Select Category</option>
-            <option value="Fresh Produce">Fresh Produce</option>
-            <option value="Bakery & Bread">Bakery & Bread</option>
-            <option value="Canned Goods">Canned Goods</option>
-            <option value="Prepared Meals">Prepared Meals</option>
+            <option value="Bakery">Bakery & Bread</option>
+            <option value="Vegetables">Fresh Vegetables</option>
+            <option value="Prepared">Prepared Meals / Fast Food</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="quantity">Quantity (in kg or meal portions)</label>
-          <input type="number" id="quantity" min="1" placeholder="e.g. 15" required>
+          <label for="quantity">Quantity (e.g. 10 kg or 5 meals)</label>
+          <input type="text" id="quantity" placeholder="e.g. 10 kg" required>
         </div>
 
         <div class="form-group">
-          <label for="pantrySelect">Target Pantry</label>
+          <label for="pantrySelect">Target Pantry / Location</label>
           <select id="pantrySelect" required>
             <option value="">Select a Food Bank</option>
-            <option value="Central City Pantry">Central City Pantry</option>
-            <option value="Hope Harbor Shelter">Hope Harbor Shelter</option>
+            <option value="Mitho Metro Food Bank">Mitho Metro Food Bank</option>
+            <option value="The Chautari Network">The Chautari Network</option>
             <option value="Eastside Community Kitchen">Eastside Community Kitchen</option>
           </select>
         </div>
@@ -67,6 +96,54 @@
       </form>
     </div>
   </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Brand Info Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+            <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+            <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+            <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+            <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+          </svg>
+          <span class="footer-brand-name">FeastForward</span>
+        </div>
+        <p class="footer-desc">Connecting local businesses, markets, and neighbors to rescue surplus food and end hunger in our community.</p>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="donate.html">Donate Food</a></li>
+          <li><a href="pantries.html">Find Pantries</a></li>
+          <li><a href="login.html">Account Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Community & Impact Column -->
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Partner Food Banks</a></li>
+          <li><a href="#">Food Safety Guide</a></li>
+          <li><a href="#">Impact Report</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 FeastForward. Built for Community Food Rescue.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

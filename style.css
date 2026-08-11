@@ -1,3 +1,51 @@
+/* Fix wrapper dimensions for login field layout */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 40px !important;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 5;
+}
+    .remember-me-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 12px 0 18px 0;
+    }
+    .remember-me-group input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .remember-me-group label {
+      font-size: 14px;
+      cursor: pointer;
+      color: #f70202; /* Adjust according to your dark card styling */
+    }
+  
+
+
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Reset & Base Styles */
 * {
   box-sizing: border-box;
@@ -6,9 +54,11 @@
 }
 
 body, html {
-  height: 100%;
+  background-color: #dcb5eab5;
+  min-height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+  overflow-y: auto;   /* Allows vertical scrolling on all pages */
 }
 
 /* Fullscreen Video Background Container */
@@ -137,7 +187,7 @@ input:focus {
 }
 
 .btn:hover {
-  background-color: #1b5e20;
+  background-color: #63e8e9;
 }
 
 /* Mode Switch Toggle */
@@ -162,7 +212,7 @@ input:focus {
 
 /* Navbar Styling */
 .navbar {
-  background-color: #ffffff;
+ background-color: #dcb5eab5;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -214,7 +264,7 @@ input:focus {
 
 /* Hero & General Pages */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('food.mp4');
+  background: linear-gradient(rgb(245 0 0 / 96%), rgba(0,0,0,0.5)), url('food.mp4');
   background-size: cover;
   color: white;
   padding: 100px 20px;
@@ -230,8 +280,22 @@ input:focus {
   gap: 15px;
 }
 
-.btn-primary { background-color: #2e7d32; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; }
-.btn-secondary { background-color: #ffffff; color: #2e7d32; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; }
+.btn-primary {
+  background-color: #2cbc33; 
+  color: #000000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+ }
+
+.btn-secondary { 
+  background-color: #ffffff; 
+  color: #000000; 
+  padding: 12px 24px; 
+  text-decoration: none; 
+  border-radius: 6px; 
+  font-weight: bold; }
 
 .page-container {
   max-width: 1000px;
@@ -255,4 +319,397 @@ input:focus {
 
 .stat-card { text-align: center; }
 .stat-card h3 { font-size: 2.2rem; color: #2e7d32; }
+
+
+
+/* Specific layout for login page container */
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Contains video overflow strictly within this section */
+}
+
+#bgVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+/* Modern Olio / Too Good To Go Style Grid */
+.listing-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #1f00f2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Category Filter Pills */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #a5d6a7;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border-color: #2e7d32;
+}
+
+/* Food Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Interactive Food Card */
+.food-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #e65100;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-category {
+  color: #2e7d32;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #222;
+  margin: 6px 0;
+}
+
+.card-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.card-qty {
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.claim-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.claim-btn:hover {
+  background-color: #1b5e20;
+}
+
+
+/* Logo & Tagline Flex Layout */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  color: #1b5e20;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+
+.brand-tagline {
+  color: #666666;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: 0.2px;
+}
+
+/* Site Footer Styling */
+.site-footer {
+  background-color: #1b5e20;
+  color: #e8f5e9;
+  padding-top: 50px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* Brand Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-brand-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: #c8e6c9;
+  line-height: 1.5;
+  max-width: 360px;
+}
+
+/* Footer Columns */
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #c8e6c9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #a5d6a7;
+  background-color: #144718;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Helper class to hide elements */
+.hidden {
+  display: none !important;
+}
+
+/* Profile Menu Wrapper */
+.user-profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Profile Trigger Button */
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid #c8e6c9;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1b5e20;
+  transition: background-color 0.2s ease;
+}
+
+.profile-btn:hover {
+  background-color: #f1f8e9;
+}
+
+/* Avatar Icon */
+.avatar-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.dropdown-arrow {
+  font-size: 0.6rem;
+  color: #666;
+  margin-left: 2px;
+}
+
+/* Floating Dropdown Card */
+.dropdown-content {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.dropdown-header {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header strong {
+  font-size: 0.9rem;
+  color: #1b5e20;
+}
+
+.dropdown-header small {
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+.dropdown-content hr {
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin: 6px 0;
+}
+
+/* Dropdown Options */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.logout-link {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.logout-link:hover {
+  background-color: #ffebee;
+}
+
+
+
+
+
+
 

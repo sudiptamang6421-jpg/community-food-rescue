@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login & Sign Up - Community Food Rescue</title>
+  <title>Login & Sign Up | FeastForward</title>
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
-  
 
-  
 </head>
 <body>
 
@@ -25,28 +23,45 @@
     <!-- Login / Sign Up Card -->
     <div class="auth-card">
       <div class="card-header">
-        <!-- SVG Logo (Green Circle + Grocery Bag + Heart Leaf) -->
-        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="90" fill="#2e7d32" />
-          <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
-          <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
-          <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
-        </svg>
-        <h2 id="modalTitle">Food Rescue</h2>
+
+        <a href="index.html" class="nav-logo">
+          <svg class="logo-icon-sm" viewBox="0 0 200 200" width="45" height="45">
+            <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+            <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+            <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+            <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+          </svg>
+          <div class="logo-text">
+            <span class="brand-name">FeastForward</span>
+            <span class="brand-tagline">Share More. Waste Less.</span>
+          </div>
+        </a>
+
         <p id="modalSubtitle">Log in to manage community food donations</p>
       </div>
 
       <form id="authForm" novalidate>
+        <!-- Email Input -->
         <div class="form-group">
           <label for="authEmail">Email Address</label>
           <input type="email" id="authEmail" placeholder="e.g. user@foodrescue.org" required>
           <span class="error-message" id="authEmailError">Please enter a valid email address.</span>
         </div>
 
+        <!-- Password Input with Eye Toggle -->
         <div class="form-group">
           <label for="authPassword">Password</label>
-          <input type="password" id="authPassword" placeholder="At least 6 characters" required>
+          <div class="password-wrapper">
+            <input type="password" id="authPassword" placeholder="At least 6 characters" required>
+            <button type="button" id="togglePasswordBtn" class="toggle-password-btn" aria-label="Toggle password visibility">👁️</button>
+          </div>
           <span class="error-message" id="authPasswordError">Password must be at least 6 characters long.</span>
+        </div>
+
+        <!-- Remember Me Checkbox -->
+        <div class="remember-me-group">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember Me</label>
         </div>
 
         <button type="submit" id="authSubmitBtn" class="btn">Log In</button>

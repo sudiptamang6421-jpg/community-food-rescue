@@ -3,32 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Pantries - Community Food Rescue</title>
+ <title>Find Local Pantries | FeastForward</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
-          <circle cx="100" cy="100" r="90" fill="#2e7d32" />
-          <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
-          <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
-          <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
-        </svg>
-        <span>Food Rescue</span>
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="donate.html">Donate Food</a>
-        <a href="pantries.html" class="active">Find Pantries</a>
-        <span id="userInfo" class="user-info"></span>
-        <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
-      </nav>
+  <div class="nav-container">
+    
+   
+    <a href="index.html" class="nav-logo">
+      <svg class="logo-icon-sm" viewBox="0 0 200 200" width="38" height="38">
+        <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+        <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+        <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+        <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+      </svg>
+      <div class="logo-text">
+        <span class="brand-name">FeastForward</span>
+        <span class="brand-tagline">Share More. Waste Less.</span>
+      </div>
+    </a>
+   
+
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="donate.html">Donate Food</a>
+  <a href="pantries.html">Find Pantries</a>
+
+  <!-- Default Login Button when logged out -->
+  <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
+
+  <!-- Profile Dropdown (Hidden until user logs in) -->
+  <div id="userProfileMenu" class="user-profile-menu hidden">
+    <button id="profileDropdownBtn" class="profile-btn" type="button">
+      <div class="avatar-circle" id="userAvatar">U</div>
+      <span id="userName">User</span>
+      <span class="dropdown-arrow">▼</span>
+    </button>
+    <div id="profileDropdown" class="dropdown-content hidden">
+      <div class="dropdown-header">
+        <strong id="dropdownName">User Name</strong>
+        <small id="dropdownEmail">user@example.com</small>
+      </div>
+      <hr>
+      <a href="donate.html" class="dropdown-item">My Donations</a>
+      <button id="logoutBtn" class="dropdown-item logout-link" type="button">Log Out</button>
     </div>
-  </header>
+  </div>
+</nav>
+
+  </div>
+</header> 
 
   <main class="page-container">
     <h2>Partner Food Pantries</h2>
@@ -36,27 +63,76 @@
 
     <div class="pantry-grid">
       <div class="pantry-card">
-        <h3>Central City Pantry</h3>
-        <p><strong>Address:</strong> 123 Main Street</p>
+        <h3>Feed The Hungry UK</h3>
+        <p><strong>Address:</strong> 123 Main Street, Tower Bridge</p>
         <p><strong>Hours:</strong> 8:00 AM - 5:00 PM</p>
         <p><strong>Needs:</strong> Fresh vegetables, Canned goods</p>
       </div>
 
       <div class="pantry-card">
-        <h3>Hope Harbor Shelter</h3>
-        <p><strong>Address:</strong> 456 Oak Avenue</p>
+        <h3>Nepal Youth Foundation UK</h3>
+        <p><strong>Address:</strong> 456 Central Hall, Plumstead</p>
         <p><strong>Hours:</strong> 9:00 AM - 7:00 PM</p>
         <p><strong>Needs:</strong> Bakery items, Prepared meals</p>
       </div>
 
       <div class="pantry-card">
         <h3>Eastside Community Kitchen</h3>
-        <p><strong>Address:</strong> 789 Pine Road</p>
+        <p><strong>Address:</strong> 789 Farm Lane, East Ham </p>
         <p><strong>Hours:</strong> 10:00 AM - 4:00 PM</p>
         <p><strong>Needs:</strong> Dairy, Produce, Dry grains</p>
       </div>
     </div>
   </main>
+
+
+  <!-- Site Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Brand Info Column -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+          <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+          <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+          <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+          <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+        </svg>
+        <span class="footer-brand-name">FeastForward</span>
+      </div>
+      <p class="footer-desc">Connecting local businesses, markets, and neighbors to rescue surplus food and end hunger in our community.</p>
+    </div>
+
+    <!-- Quick Links Column -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="donate.html">Donate Food</a></li>
+        <li><a href="pantries.html">Find Pantries</a></li>
+        <li><a href="login.html">Account Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Community & Impact Column -->
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Partner Food Banks</a></li>
+        <li><a href="#">Food Safety Guide</a></li>
+        <li><a href="#">Impact Report</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Copyright Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 FeastForward. Built for Community Food Rescue.</p>
+  </div>
+</footer>
 
   <script src="script.js"></script>
 </body>

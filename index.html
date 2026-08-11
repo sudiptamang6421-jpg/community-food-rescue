@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Food Rescue - Home</title>
+  <title>FeastForward | Community Food Rescue & Surplus Sharing</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,30 +11,55 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
+      
       <a href="index.html" class="nav-logo">
-        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+        <svg class="logo-icon-sm" viewBox="0 0 200 200" width="38" height="38">
           <circle cx="100" cy="100" r="90" fill="#2e7d32" />
           <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
           <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
           <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
         </svg>
-        <span>Food Rescue</span>
+        <div class="logo-text">
+          <span class="brand-name">FeastForward</span>
+          <span class="brand-tagline">Share More. Waste Less.</span>
+        </div>
       </a>
+
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="donate.html">Donate Food</a>
         <a href="pantries.html">Find Pantries</a>
-        <span id="userInfo" class="user-info"></span>
+
+        <!-- Logged Out Button -->
         <a href="login.html" id="navAuthBtn" class="btn-nav">Login</a>
+
+        <!-- Logged In Profile Menu -->
+        <div id="userProfileMenu" class="user-profile-menu hidden">
+          <button id="profileDropdownBtn" class="profile-btn" type="button">
+            <div class="avatar-circle" id="userAvatar">U</div>
+            <span id="userName">User</span>
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div id="profileDropdown" class="dropdown-content hidden">
+            <div class="dropdown-header">
+              <strong id="dropdownName">User Name</strong>
+              <small id="dropdownEmail">user@example.com</small>
+            </div>
+            <hr>
+            <a href="donate.html" class="dropdown-item">My Donations</a>
+            <button id="logoutBtn" class="dropdown-item logout-link" type="button">Log Out</button>
+          </div>
+        </div>
       </nav>
+
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Bridging Surplus Food with Local Hunger Needs</h1>
-      <p>Join businesses, local markets, and volunteers in reducing food waste across our community.</p>
+      <h1>Save Food. Feed Communities.</h1>
+      <p>Connect local surplus food with neighbors and pantries in need.</p>
       <div class="hero-buttons">
         <a href="donate.html" class="btn btn-primary">Donate Food Now</a>
         <a href="pantries.html" class="btn btn-secondary">Find a Food Pantry</a>
@@ -42,9 +67,27 @@
     </div>
   </section>
 
+  <!-- Food Listings Section -->
+  <section class="listing-section">
+    <h2 class="section-title">Available Food Rescues Near You</h2>
+
+    <!-- Interactive Category Filter -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All Items</button>
+      <button class="filter-btn" data-filter="Bakery">Bakery</button>
+      <button class="filter-btn" data-filter="Vegetables">Vegetables</button>
+      <button class="filter-btn" data-filter="Prepared">Prepared Meals</button>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="cards-grid" id="foodCardsContainer">
+      <!-- Items will be populated dynamically via JavaScript -->
+    </div>
+  </section>
+
   <!-- Impact Tracker Section -->
   <section class="impact-section">
-    <h2>Our Community Impact</h2>
+    <h2 style="text-align: center; color: #1f00f2;">Our Community Impact</h2>
     <div class="stats-grid">
       <div class="stat-card">
         <h3 id="totalMeals">0</h3>
@@ -60,6 +103,54 @@
       </div>
     </div>
   </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Brand Info Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="logo-icon-sm" viewBox="0 0 200 200" width="32" height="32">
+            <circle cx="100" cy="100" r="90" fill="#2e7d32" />
+            <path d="M60 85 L140 85 L130 160 L70 160 Z" fill="#ffffff" />
+            <path d="M80 85 C80 60, 120 60, 120 85" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+            <path d="M100 110 C90 95, 75 110, 100 135 C125 110, 110 95, 100 110 Z" fill="#2e7d32" />
+          </svg>
+          <span class="footer-brand-name">FeastForward</span>
+        </div>
+        <p class="footer-desc">Connecting local businesses, markets, and neighbors to rescue surplus food and end hunger in our community.</p>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="donate.html">Donate Food</a></li>
+          <li><a href="pantries.html">Find Pantries</a></li>
+          <li><a href="login.html">Account Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Community & Impact Column -->
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Partner Food Banks</a></li>
+          <li><a href="#">Food Safety Guide</a></li>
+          <li><a href="#">Impact Report</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 FeastForward. Built for Community Food Rescue.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
