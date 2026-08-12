@@ -1,4 +1,4 @@
-/* Fix wrapper dimensions for login field layout */
+/* wrapper dimensions for login field layout */
 .password-wrapper {
   position: relative;
   width: 100%;
@@ -37,14 +37,6 @@
     }
   
 
-
-
-/* Reset & Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 /* Reset & Base Styles */
 * {
@@ -190,7 +182,7 @@ input:focus {
   background-color: #63e8e9;
 }
 
-/* Mode Switch Toggle */
+
 .auth-toggle {
   margin-top: 20px;
   text-align: center;
@@ -346,7 +338,6 @@ input:focus {
 
 
 
-/* Modern Olio / Too Good To Go Style Grid */
 .listing-section {
   max-width: 1100px;
   margin: 40px auto;
@@ -360,7 +351,7 @@ input:focus {
   text-align: center;
 }
 
-/* Category Filter Pills */
+
 .filter-container {
   display: flex;
   justify-content: center;
