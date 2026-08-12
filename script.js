@@ -94,9 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Attach Reserve Click Handlers
-    document.querySelectorAll('.claim-btn').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const itemId = parseInt(e.target.getAttribute('data-id'));
+    $('.claim-btn').on('click', function(e) {
+    const itemId = parseInt($(this).data('id'));
         const itemIndex = foodItems.findIndex(i => i.id === itemId);
 
         if (itemIndex !== -1) {
@@ -116,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
           renderCards(filterCategory);
         }
       });
-    });
-  }
+    }
+    
 
   // Initial call on page load
   renderCards();
@@ -126,16 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 3. CATEGORY FILTER BUTTONS
   // ==========================================
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-
-      const filterValue = e.target.getAttribute('data-filter');
-      renderCards(filterValue);
-    });
-  });
+  $('.filter-btn').on('click', function() {
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+    const filterValue = $(this).data('filter');
+    renderCards(filterValue);
+});
 
   // ==========================================
   // 4. DONATE FORM HANDLER (WORKS ON BOTH INDEX & DONATE PAGE)
