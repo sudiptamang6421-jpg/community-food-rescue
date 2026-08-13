@@ -17,10 +17,10 @@ This is the official GitHub repository for **FeastForward**, a web application d
 
 | Name | Student ID | Responsibilities & Features Implemented |
 | :--- | :--- | :--- |
-| **Sudip Tamang** | B01053199 | Application architecture, GitHub repository management, main JS logic (`script.js`), `localStorage`, and interactive reservation handling. |
-| **Rahul Shrestha** | B01057584 | CSS visual architecture (`style.css`), global color palette, typography rules, component styling, card layouts, and navigation styling. |
-| **Pratik Mangrati** | B01062752 | Structural HTML markup for all web pages (`index.html`, `pantries.html`, `login.html`, `donate.html`), semantic tags, and form bindings. |
-| **Sugam Giri** | B01059694 | End-to-end testing, cross-browser responsiveness checks, form edge-case validation, application debugging, and report formatting. |
+| **Sudip Tamang** | B01056559 | Application architecture, GitHub repository management, main JS logic (`script.js`), `localStorage`, and interactive reservation handling. |
+| **Rahul Shrestha** | B01059350 | CSS visual architecture (`style.css`), global color palette, typography rules, component styling, card layouts, and navigation styling. |
+| **Pratik Mangrati** | B01059745 | Structural HTML markup for all web pages (`index.html`, `pantries.html`, `login.html`, `donate.html`), semantic tags, and form bindings. |
+| **Sugam Giri** | B01059390 | End-to-end testing, cross-browser responsiveness checks, form edge-case validation, application debugging, and report formatting. |
 
 ---
 
