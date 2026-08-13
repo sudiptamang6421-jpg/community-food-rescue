@@ -6,10 +6,10 @@ This is the official GitHub repository for **FeastForward**, a web application d
 
 ## 📌 Project Description
 
-** Module:** COM109 Client-Side Development
-** Coursework: ** Coursework 2 (Group Project)
-** Theme: ** Community Food Rescue & Surplus Sharing Platform
-** Tech: ** HTML5, CSS3 (Flexbox/Grid), JavaScript, jQuery, Bootstrap 5
+**Module:** COM109 Client-Side Development
+**Coursework:** Coursework 2 (Group Project)
+**Theme:** Community Food Rescue & Surplus Sharing Platform
+**Tech:** HTML5, CSS3 (Flexbox/Grid), JavaScript, jQuery, Bootstrap 5
 
 ---
 
