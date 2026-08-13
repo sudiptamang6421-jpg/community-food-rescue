@@ -16,11 +16,11 @@ This is the official GitHub repository for **FeastForward**, a web application d
 ## 👥 Team Members and Their Individual Responsibilities
 
 | Name | Student ID | Responsibilities & Features Implemented |
-
-| **Sudip Tamang** | B01053199 | Homepage structure (`index.html`), navigation bar, global site header & footer styling. |
-| **Pratik Mangrati** | B01062752 | Food donation portal (`donate.html`), donation forms, user input handling, and page layout. |
-| **Sugam Giri** | B01059694 | Food pantry directory (`pantries.html`), filter buttons, card layouts, Bootstrap/jQuery integration. |
-| **Anisha Thapa** | B01057584 | User authentication (`login.html`), interactive UI components, script validations (`script.js`), styling in `style.css`. |
+| :--- | :--- | :--- |
+| **Sudip Tamang** | B01053199 | Application architecture, GitHub repository management, main JS logic (`script.js`), `localStorage`, and interactive reservation handling. |
+| **Rahul Shrestha** | B01057584 | CSS visual architecture (`style.css`), global color palette, typography rules, component styling, card layouts, and navigation styling. |
+| **Pratik Mangrati** | B01062752 | Structural HTML markup for all web pages (`index.html`, `pantries.html`, `login.html`, `donate.html`), semantic tags, and form bindings. |
+| **Sugam Giri** | B01059694 | End-to-end testing, cross-browser responsiveness checks, form edge-case validation, application debugging, and report formatting. |
 
 ---
 
